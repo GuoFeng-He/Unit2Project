@@ -26,12 +26,21 @@ public class LinearEquation {
         return "y=" + slope() + "x+" + yIntercept();
     }
 
+    public String coordinateForX(double x){
+        double yCoordinate = slope() * x + yIntercept();
+        return "(" + x + ", " + yCoordinate + ")";
+    }
+
     public double yIntercept(){
         return (y2 - x2 * slope());
     }
 
     private double roundToHundredth(double toRound){
         return Math.round(toRound * 100) / 100.;
+    }
+
+    public String lineInfo(){
+        return "The two";
     }
 
 }
