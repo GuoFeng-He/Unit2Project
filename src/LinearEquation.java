@@ -18,7 +18,7 @@ public class LinearEquation {
         return (double) y2 - y1;
     }
 
-    private double slope(){
+    public double slope(){
         return roundToHundredth((deltaY() / deltaX()));
     }
 
@@ -33,11 +33,11 @@ public class LinearEquation {
         return (int) Math.abs(deltaY()) + "/" + (int) Math.abs(deltaX());
     }
 
-    private double distance(int x1, int y1, int x2, int y2){
+    public double distance(){
         return roundToHundredth(Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)));
     }
 
-    private String equation(){
+    public String equation(){
         String baseEquation = "y = ";
         double yIntercept = yIntercept();
         String slopeSign = "";
@@ -86,7 +86,7 @@ public class LinearEquation {
                 "The equation of the line between these points is: " + equation() + "\n" +
                 "The slope of this line is: " + slope() + "\n" +
                 "The y-intercept of this line is: " + yIntercept() + "\n" +
-                "The distance between these points is " + distance(x1, y1, x2, y2);
+                "The distance between these points is " + distance();
     }
 
 }

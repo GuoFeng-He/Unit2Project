@@ -41,6 +41,7 @@ public class LinearEquationLogic {
         while (!yesNo.toLowerCase().equals("no")) {
             System.out.print("\nEnter a x value: ");
             double xInput = scan.nextDouble();
+            scan.nextLine();
             System.out.println("Your corresponding coordinate is: " + equation.coordinateForX(xInput));
             System.out.print("Again? (yes/no): ");
             yesNo = scan.nextLine();
