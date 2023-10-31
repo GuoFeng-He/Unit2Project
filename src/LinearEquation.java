@@ -70,11 +70,11 @@ public class LinearEquation {
 
     public String coordinateForX(double x){
         double yCoordinate = slope() * x + yIntercept();
-        return "(" + x + ", " + yCoordinate + ")";
+        return "(" + x + ", " + roundToHundredth(yCoordinate) + ")";
     }
 
     public double yIntercept(){
-        return (y2 - x2 * slope());
+        return roundToHundredth(y2 - x2 * slope());
     }
 
     private double roundToHundredth(double toRound){
